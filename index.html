@@ -372,11 +372,11 @@
 
       <!-- CTA -->
       <a href="javascript:void(0)" class="btn btn-dark cta">Compre pelo
-        <span class="d-block"> WhatsApp </span> <img src="assets/images/whatsapp.png" alt="WhatsApp">
-     </a>
+       <span class="d-block"> WhatsApp </span> <img src="assets/images/whatsapp.png" alt="WhatsApp">
+    </a>
 
-     <!-- Modal -->
-     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
             <div class="modal-header border-0">
@@ -433,105 +433,104 @@
            // jQuery code
 
            $("[data-trigger]").on("click", function (e) {
-              e.preventDefault();
-              e.stopPropagation();
-              var offcanvas_id = $(this).attr("data-trigger");
-              $(offcanvas_id).toggleClass("show");
-              $("body").toggleClass("offcanvas-active");
-              $(".screen-overlay").toggleClass("show");
-           });
+             e.preventDefault();
+             e.stopPropagation();
+             var offcanvas_id = $(this).attr("data-trigger");
+             $(offcanvas_id).toggleClass("show");
+             $("body").toggleClass("offcanvas-active");
+             $(".screen-overlay").toggleClass("show");
+          });
 
            // Close menu when pressing ESC
            $(document).on("keydown", function (event) {
-              if (event.keyCode === 27) {
+             if (event.keyCode === 27) {
                $(".mobile-offcanvas").removeClass("show");
                $("body").removeClass("overlay-active");
             }
          });
 
            $(".btn-close, .screen-overlay").click(function (e) {
-              $(".screen-overlay").removeClass("show");
-              $(".mobile-offcanvas").removeClass("show");
-              $("body").removeClass("offcanvas-active");
-           });
+             $(".screen-overlay").removeClass("show");
+             $(".mobile-offcanvas").removeClass("show");
+             $("body").removeClass("offcanvas-active");
+          });
          }); // jquery end
          
          
          $('#our-partner').owlCarousel({
-          margin: 10,
-          loop: true,
-          autoplay: true,
-          autoplayHoverPause: false,
-          mouseDrag: true,
-          dots: true,
-          autoplayTimeout: 6000,
-          autoplaySpeed: 4000,
-          items: 4,
-          nav: false,
-          responsive: {
-           0: {
-            items: 1.2,
-            margin: 5,
+           margin: 10,
+           loop: true,
+           autoplay: false,
+           autoplayHoverPause: true,
+           mouseDrag: true,
+           dots: true,
+           autoplayTimeout: 4000,
+           autoplaySpeed: 4000,
+           items: 1.2,
+           dotsEach: true,
+           nav: false,
+           responsive: {
+             0: {
+               items: 1.2,
+               margin: 5,
 
-         },
-         
-         576: {
-            items: 1.4,
-         },
-         
-         768: {
-            items: 2,
-         },
-         
-         991: {
-            items: 3,
-         },
-         
-         1200: {
-            items: 4,
-            dots: false,
-            autoplay: false,
-            mouseDrag: false,
+            },
+            
+            576: {
+               items: 1.4,
+            },
+            
+            768: {
+               items: 2,
+            },
+            
+            991: {
+               items: 3,
+            },
+            
+            1200: {
+               items: 4,
+               dots: false,
+               mouseDrag: false,
 
-         },
-      }
-   });
+            },
+         }
+      });
          
          
          
          $('#our-plan').owlCarousel({
-          margin: 30,
-          loop: true,
-          autoplay: true,
-          autoplayHoverPause: false,
-          mouseDrag: true,
-          dots: true,
-          autoplayTimeout: 6000,
-          autoplaySpeed: 4000,
-          items: 2, 
-          nav: true,
-          navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
-          responsive: {
-           0: {
-            items: 1,
-            nav: true,
+           margin: 30,
+           loop: true,
+           autoplay: false,
+           autoplayHoverPause: true,
+           mouseDrag: true,
+           dots: true,
+           autoplayTimeout: 4000,
+           autoplaySpeed: 4000,
+           items: 2, 
+           nav: true,
+           navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
+           responsive: {
+             0: {
+               items: 1,
+               nav: true,
 
-         },
-         
-         768: {
-            items: 2,
-         },
-         
-         991: {
-            items: 2,
-            dots: false,
-            autoplay: false,
-            mouseDrag: false,
-         },
-         
-         
-      }
-   });
+            },
+            
+            768: {
+               items: 2,
+            },
+            
+            991: {
+               items: 2,
+               dots: false,
+               mouseDrag: false,
+            },
+            
+            
+         }
+      });
          
          
          
@@ -608,33 +607,33 @@
          }
          
          $(document).ready(function () {
-          $(".navbar-toggler").click(function () {
-           $(".fa").toggleClass("fa-close");
-           $(".fa").toggleClass("fa-bars");
-        });
+           $(".navbar-toggler").click(function () {
+             $(".fa").toggleClass("fa-close");
+             $(".fa").toggleClass("fa-bars");
+          });
 
            $("#navbar_main .nav-link").click(function () {
-           $("#navbar_main").removeClass("show");
-           $(".screen-overlay").removeClass("show");
-            $(".fa").toggleClass("fa-close");
-           $(".fa").toggleClass("fa-bars");
-        });
+             $("#navbar_main").removeClass("show");
+             $(".screen-overlay").removeClass("show");
+             $(".fa").toggleClass("fa-close");
+             $(".fa").toggleClass("fa-bars");
+          });
 
-       });   
+        });   
          
            // Page Loader
 
            (function ($) {
-             'use strict';
+              'use strict';
 
            // Preloader
            $(window).on('load', function () {
-              $('#preloader')
-              .delay(800)
-              .fadeOut('slow', function () {
-                $(this).remove();
-             });
+             $('#preloader')
+             .delay(800)
+             .fadeOut('slow', function () {
+              $(this).remove();
            });
+          });
         })(window.jQuery);
 
      </script>

@@ -411,7 +411,7 @@ main {
   background: #EFEFEF;
   margin-left: -30px;
   margin-right: -30px;
-  padding: 10px 35px;
+  padding: 10px 45px;
 }
 
 .plan-section .card ul li {
@@ -556,6 +556,7 @@ main {
   background: #D9D9D9;
   margin: 0 3px;
 }
+
 
 /* Consultant form */
 
@@ -718,13 +719,13 @@ main {
 .plan-section .owl-nav {
   position: absolute;
   position: absolute;
-  top: 50%;
-  right: -10px;
+  top: 46%;
   transform: translateY(-50%);
   color: #767676 !important;
   margin: 0;
   font-size: 30px !important;
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 .plan-section .owl-nav button {
@@ -735,6 +736,7 @@ main {
   border: 1px solid #F3F3F3;
   border-radius: 50%;
   background: #e50062 !important;
+  position: absolute;
 }
 
 .plan-section .owl-nav button i {
@@ -743,9 +745,16 @@ main {
   font-size: 24px;
 }
 
+
 .plan-section .owl-prev {
-  display: none;
+   left: -12px;
 }
+
+
+.plan-section .owl-next {
+   right: -12px;
+}
+
 
 /* Footer */
 
