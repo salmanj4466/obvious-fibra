@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+     <!-- Favicon -->
+     <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/ico" /> -->
+     <!-- Stylesheet -->
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+     <!-- Owl Carousel -->
+     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+     <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+     <title>OBVIOUS FIBRA</title>
+  </head>
+  <body>
+      <div id="preloader"></div>
+      <!-- Header -->
+      <header>
+        <b class="screen-overlay"></b>
+        <nav class="navbar2 navbar d-lg-none fixed-top navbar-expand-lg navbar-light">
+           <div class="container">
+              <a href="index.html"><img class="logo-top" src="assets/images/logo.png" alt="logo"></a>
+              <button data-trigger="#navbar_main" class="navbar-toggler" type="button">
+                 <span class="fa fa-bars"></span>
+              </button>
+           </div>
+        </nav>
+        <!-- d-lg-none -->
+        <nav id="navbar_main" class="mobile-offcanvas navbar fixed-top navbar-expand-lg navbar-light">
+           <div class="container nav-cont">
+              <a class="navbar-brand d-none d-lg-block" href="index.html">
+                 <img class="logo-top" src="assets/images/logo.png" alt="logo"> 
+              </a>
+              <div class="offcanvas-header">
+              </div>
+              <ul class="navbar-nav">
+                 <li class="nav-item"><a class="nav-link" href="#plan"> Planos <i class="fa fa-angle-right"></i></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#about"> Sobre nós <i class="fa fa-angle-right"></i></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#media"> Na mídia <i class="fa fa-angle-right"></i></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#faq"> Perguntas Frequentes <i class="fa fa-angle-right"></i></a></li>
+                 <li class="nav-item"><a class="nav-link text-black pl-xl-4" href="registration form.html"> Curitiba, PR <i class="fa fa-angle-right ml-3"></i></a></li>
+              </ul>
+           </div>
+        </nav>
+     </header>
+
+      <!-- main -->
+      <main>
+         <!-- Successfuly -->
+         <section class="success-section">
+            <div class="container-fluid">
+               <div class="row justify-content-center">
+                  <div class="col-md-8 col-lg-5 col-xl-4 text-center">
+                     <img src="assets/images/check.png" alt="check">
+                     <p>Entraremos em contato assim que tivermos novidades</p>
+                     <a href="javascript:void(0)" class="btn btn-outline-danger">Voltar para o inicio</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- Jquery -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script>
+         /// some script
+         
+         // jquery ready start
+         $(document).ready(function () {
+           // jQuery code
+         
+           $("[data-trigger]").on("click", function (e) {
+             e.preventDefault();
+             e.stopPropagation();
+             var offcanvas_id = $(this).attr("data-trigger");
+             $(offcanvas_id).toggleClass("show");
+             $("body").toggleClass("offcanvas-active");
+             $(".screen-overlay").toggleClass("show");
+           });
+         
+           // Close menu when pressing ESC
+           $(document).on("keydown", function (event) {
+             if (event.keyCode === 27) {
+               $(".mobile-offcanvas").removeClass("show");
+               $("body").removeClass("overlay-active");
+             }
+           });
+         
+           $(".btn-close, .screen-overlay").click(function (e) {
+             $(".screen-overlay").removeClass("show");
+             $(".mobile-offcanvas").removeClass("show");
+             $("body").removeClass("offcanvas-active");
+           });
+         }); // jquery end
+          
+
+            $(document).ready(function () {
+          $(".navbar-toggler").click(function () {
+           $(".fa").toggleClass("fa-close");
+           $(".fa").toggleClass("fa-bars");
+        });
+
+           $("#navbar_main .nav-link").click(function () {
+           $("#navbar_main").removeClass("show");
+           $(".screen-overlay").removeClass("show");
+            $(".fa").toggleClass("fa-close");
+           $(".fa").toggleClass("fa-bars");
+        });
+
+       });   
+         
+         // Page Loader
+         
+         (function ($) {
+           'use strict';
+         
+           // Preloader
+           $(window).on('load', function () {
+             $('#preloader')
+               .delay(800)
+               .fadeOut('slow', function () {
+                 $(this).remove();
+               });
+           });
+         })(window.jQuery);
+         
+         
+      </script>
+   </body>
+</html>
